@@ -1,6 +1,9 @@
 //c libs
 #include <stdlib.h>
 #include <stdio.h>
+#include <stddef.h>
+#include <stdbool.h>
+#include <math.h>
 
 //external libs
 #include <glad/gl.h>
@@ -34,6 +37,7 @@ int main()
         -0.5f, -0.5f, 0.0f, 1.0f, 1.0f, 1.0f,
     }; 
 
+    bool test = true;
     uint32_t indices[] = {
         0, 1, 2,
         1, 2, 3,
@@ -78,8 +82,14 @@ int main()
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        // draw our first triangle
         glUseProgram(newshader);
+        float timeValue = glfwGetTime();
+        float x_val = cos(timeValue) / 2.0f;
+        float y_val = sin(timeValue) / 2.0f;
+        tge_gl_uniform1f(&newshader, "value", sin(10.0f * timeValue) * 0.5f + 0.5f);
+        tge_gl_uniform1f(&newshader, "x_val", x_val);
+        tge_gl_uniform1f(&newshader, "y_val", y_val);
+        // draw our first triangle
         glBindVertexArray(VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
         //glDrawArrays(GL_TRIANGLES, 0, 3); // set the count to 6 since we're drawing 6 vertices now (2 triangles); not 3!
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);

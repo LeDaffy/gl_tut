@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 
 //external libs
 #include <GLFW/glfw3.h>
@@ -79,4 +80,17 @@ tge_gl_Shader tge_gl_Shader_new(const char* vertex_source_path,
     glDeleteShader(fragment);
 
     return ID;
+}
+
+void tge_gl_uniform1b(const tge_gl_Shader* const shader, const char* name, bool value)
+{
+        glUniform1i(glGetUniformLocation(*shader, name), value);
+}
+void tge_gl_uniform1i(const tge_gl_Shader* const shader, const char* name, int value) 
+{
+        glUniform1i(glGetUniformLocation(*shader, name), value);
+}
+void tge_gl_uniform1f(const tge_gl_Shader* const shader, const char* name, float value) 
+{
+        glUniform1f(glGetUniformLocation(*shader, name), value);
 }
