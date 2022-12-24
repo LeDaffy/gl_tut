@@ -1,0 +1,34 @@
+" ============================================================================
+" Netrw Directory Listing                                        (netrw v171)
+"   /home/conor/Dev/gl_tut/src/tge/include/tge
+"   Sorted by      name
+"   Sort sequence: [\/]$,\<core\%(\.\d\+\)\=\>,\.h$,\.c$,\.cpp$,\~\=\*$,*,\.o$,\.obj$,\.info$,\.swp$,\.bak$,\~$
+"   Quick Help: <F1>:help  -:go up dir  D:delete  R:rename  s:sort-by  x:special
+" ==============================================================================
+../
+gl_tut/
+| .cache/
+| .git/
+| build/
+| src/
+| | .cache/
+| | libs/
+| | shaders/
+| | tge/
+| | | include/
+| | | | tge/
+| | | | | gl.h
+| | | | | util.h
+| | | | | window.h
+| | | gl.c
+| | | util.c
+| | | window.c
+| | | CMakeLists.txt
+| | game.h
+| | game.c
+| | main.c
+| | CMakeLists.txt
+| | compile_commands.json@	 --> compile_commands.json
+| .gitignore
+| CMakeLists.txt
+| compile_commands.json@	 --> compile_commands.json

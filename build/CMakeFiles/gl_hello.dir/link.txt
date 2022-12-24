@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/gl_hello.dir/src/main.c.o CMakeFiles/gl_hello.dir/src/game.c.o -o gl_hello  src/tge/libtge.a src/libs/libglad.a -lglfw src/libs/libstb_image.a -lglfw -lGL -lcglm -lm 

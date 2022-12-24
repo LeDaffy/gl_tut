@@ -82,15 +82,15 @@ tge_gl_Shader tge_gl_Shader_new(const char* vertex_source_path,
     return ID;
 }
 
-void tge_gl_uniform1b(const tge_gl_Shader* const shader, const char* name, bool value)
+void tge_gl_uniform1b(const tge_gl_Shader* const shader, const char* const name, bool value)
 {
         glUniform1i(glGetUniformLocation(*shader, name), value);
 }
-void tge_gl_uniform1i(const tge_gl_Shader* const shader, const char* name, int value) 
+void tge_gl_uniform1i(const tge_gl_Shader* const shader, const char* const name, int value) 
 {
         glUniform1i(glGetUniformLocation(*shader, name), value);
 }
-void tge_gl_uniform1f(const tge_gl_Shader* const shader, const char* name, float value) 
+void tge_gl_uniform1f(const tge_gl_Shader* const shader, const char* const name, float value) 
 {
         glUniform1f(glGetUniformLocation(*shader, name), value);
 }

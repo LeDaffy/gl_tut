@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtge.a CMakeFiles/tge.dir/window.c.o CMakeFiles/tge.dir/gl.c.o CMakeFiles/tge.dir/util.c.o
+/usr/bin/ranlib libtge.a
